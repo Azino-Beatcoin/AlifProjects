@@ -69,3 +69,19 @@ func Total(cards []types.Card) types.Money {
 
 	return sum
 }
+
+// PaymentSources function
+func PaymentSources(cards []types.Card) []types.PaymentSource {
+	arr := make([]types.PaymentSource, 0)
+	for i := 0; i < len(cards); i++ {
+		if cards[i].Balance > 0 && cards[i].Active == true {
+			obj := types.PaymentSource{
+				Type:    "card",
+				Number:  string(cards[i].PAN),
+				Balance: cards[i].Balance,
+			}
+			arr = append(arr, obj)
+		}
+	}
+	return arr
+}

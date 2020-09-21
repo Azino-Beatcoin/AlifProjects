@@ -1,6 +1,8 @@
 package card
 
-import "bank/pkg/bank/types"
+import (
+	"github.com/Azino-Beatcoin/bank/pkg/bank/types"
+)
 
 // IssueCard returns card type from types.Card template
 func IssueCard(currency types.Currency, color string, name string) types.Card {

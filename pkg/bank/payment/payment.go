@@ -1,7 +1,7 @@
 package payment
 
 import (
-	"bank/pkg/bank/types"
+	"github.com/Azino-Beatcoin/bank/pkg/bank/types"
 )
 
 // Max returns maximal payment

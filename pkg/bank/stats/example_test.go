@@ -33,3 +33,31 @@ func ExampleAvg() {
 	// Output:
 	// 250
 }
+
+func ExapmleTotalInCategory() {
+	var payments = []types.Payment{
+		types.Payment{
+			Category: "1",
+			Amount:   100,
+		},
+		types.Payment{
+			Category: "2",
+			Amount:   200,
+		},
+		types.Payment{
+			Category: "2",
+			Amount:   300,
+		},
+		types.Payment{
+			Category: "4",
+			Amount:   400,
+		},
+	}
+
+	result := TotalInCategory(payments, types.Category("2"))
+
+	fmt.Println(result)
+
+	// Output:
+	// 500
+}
